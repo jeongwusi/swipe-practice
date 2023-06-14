@@ -1,44 +1,25 @@
 :root {
-  --primary-color: #333333;
-  --white-color: #ffffff;
-  --gray-color: #dddddd;
-  --black-color: #2d2d2d;
+  --orange-color: rgb(255, 96, 54);
+  --pink-color: rgb(253, 38, 122);
 }
 
-html {
-  width: 100%;
-}
-*,
-*::before,
-*::after {
-  box-sizing: border-box !important;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-*:focus {
-  outline: none;
-}
-body {
+* {
   margin: 0;
-  font-family: ‘Roboto’, -apple-system, BlinkMacSystemFont, ‘Segoe UI’, ‘Oxygen’,
-    ‘Ubuntu’, ‘Cantarell’, ‘Fira Sans’, ‘Droid Sans’, ‘Helvetica Neue’,
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-  min-width: 572px;
+  padding: 0;
+  box-sizing: border-box;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, ‘Courier New’,
-    monospace;
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
-#root {
-  margin: 0 auto;
+
+body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(0deg, var(--orange-color), var(--pink-color))
+    no-repeat;
 }
