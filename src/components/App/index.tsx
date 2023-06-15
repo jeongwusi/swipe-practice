@@ -1,5 +1,11 @@
+import Swiper from "./swiper";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <Swiper />
+    </>
+  );
 };
 
 export default App;
