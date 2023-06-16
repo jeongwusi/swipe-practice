@@ -1,4 +1,6 @@
 .container {
+  display: flex;
+  justify-content: space-evenly;
   height: 70vh;
   aspect-ratio: 2 / 3;
   perspective: 1000px;

@@ -1,0 +1,38 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background: linear-gradient(0deg, var(--orange-color), var(--pink-color))
+    no-repeat;
+
+  overflow: hidden;
+}
+
+.like,
+.dislike {
+  font-size: 16vh;
+  border-radius: 50%;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  animation-name: animation1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  /* don't run animation at the beginning */
+  animation-play-state: paused;
+}
+
+.like {
+  color: var(--red-color);
+  background-color: var(--grey-color);
+}
+
+.dislike {
+  color: var(--grey-color);
+  background-color: var(--black-color);
+}

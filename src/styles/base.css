@@ -1,25 +1,45 @@
 :root {
+  --red-color: rgb(255, 0, 30);
   --orange-color: rgb(255, 96, 54);
   --pink-color: rgb(253, 38, 122);
+  --grey-color: rgba(255, 255, 255, 0.5);
+  --black-color: rgba(0, 0, 0, 0.5);
 }
 
-* {
+html {
+  width: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+*:focus {
+  outline: none;
+}
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: ‘Roboto’, -apple-system, BlinkMacSystemFont, ‘Segoe UI’, ‘Oxygen’,
+    ‘Ubuntu’, ‘Cantarell’, ‘Fira Sans’, ‘Droid Sans’, ‘Helvetica Neue’,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  min-width: 572px;
 }
-
-html,
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, ‘Courier New’,
+    monospace;
 }
-
-body {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background: linear-gradient(0deg, var(--orange-color), var(--pink-color))
-    no-repeat;
+#root {
+  margin: 0 auto;
 }

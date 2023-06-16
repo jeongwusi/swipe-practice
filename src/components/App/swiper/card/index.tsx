@@ -1,23 +1,15 @@
+import { CSSProperties } from "react";
 import styles from "./index.module.css";
 
 interface CardProps {
-  pictures: { url: string }[];
-  currentIndex: number;
-  cardIndex: number;
+  imageUrl: string;
+  style: CSSProperties & { "--i": number };
 }
 
-const Card = ({ pictures, currentIndex, cardIndex }: CardProps) => {
-  const isActive = currentIndex === cardIndex;
+const Card = ({ imageUrl, style }: CardProps) => {
   return (
-    <div className={`${styles.container} ${isActive ? styles.active : ""}`}>
-      {pictures.map((picture, index) => (
-        <img
-          key={index}
-          src={picture.url}
-          alt="sourceByUnsplash"
-          style={{ display: isActive ? "block" : "none" }}
-        />
-      ))}
+    <div className={styles.container} style={style}>
+      <img src={imageUrl} alt="Card" />
     </div>
   );
 };
